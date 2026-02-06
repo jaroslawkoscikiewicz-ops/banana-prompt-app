@@ -77,7 +77,7 @@ def generate_prompt(image, api_key):
     """Wysyła zdjęcie do Gemini Vision w celu uzyskania opisu."""
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-1.5-flash-latest')
+        model = genai.GenerativeModel('gemini-1.5-pro')
         
         # Instrukcja dla modelu wizyjnego, aby stworzył idealny prompt
         prompt_instruction = """
