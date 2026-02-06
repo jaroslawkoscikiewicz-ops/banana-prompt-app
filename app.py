@@ -77,7 +77,7 @@ def generate_prompt(image, api_key):
     """Wysyła zdjęcie do Gemini Vision w celu uzyskania opisu."""
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-1.5-flash-latest')
         
         # Instrukcja dla modelu wizyjnego, aby stworzył idealny prompt
         prompt_instruction = """
@@ -137,4 +137,4 @@ if uploaded_file is not None:
                 st.caption("Skopiuj powyższy tekst i wklej do generatora.")
 
 # Stopka
-st.markdown("<div class='footer'>Powered by Gemini Vision • Designed for Nano Banana Pro</div>", unsafe_allow_html=True)
+st.markdown("<div class='footer'>Powered by Gemini Vision • Designed koscikiewicz.com</div>", unsafe_allow_html=True)
